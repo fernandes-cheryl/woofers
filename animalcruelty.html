@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Cruelty Against Animals </title>
+
+<!-- CSS -->
+<style>
+body{
+color:#003366;
+}
+.myForm {
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 0.8em;
+width: 20em;
+padding: 1em;
+border: 1px solid #ccc;
+}
+
+.myForm * {
+box-sizing: border-box;
+}
+
+.myForm fieldset {
+border: none;
+padding: 0;
+}
+
+.myForm legend,
+.myForm label {
+padding: 0;
+font-weight: bold;
+}
+
+.myForm label.choice {
+font-size: 0.9em;
+font-weight: normal;
+}
+
+.myForm input[type="text"],
+.myForm input[type="tel"],
+.myForm input[type="email"],
+.myForm input[type="datetime-local"],
+.myForm select,
+.myForm textarea {
+display: block;
+width: 100%;
+border: 1px solid #ccc;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 0.9em;
+padding: 0.3em;
+}
+
+.myForm textarea {
+height: 100px;
+}
+
+.myForm button {
+padding: 1em;
+border-radius: 0.5em;
+background: #eee;
+border: none;
+font-weight: bold;
+margin-top: 1em;
+}
+
+.myForm button:hover {
+background: #ccc;
+cursor: pointer;
+}
+</style>
+
+</head>
+<body style>
+
+<form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
+<h4>Please enter your contact information below: </h4>
+<p>
+<label> First Name
+<input type="text" name="customer_f_name" required>
+</label> 
+</p>
+
+<p>
+<label> Last Name
+<input type="text" name="customer_l_name" required>
+</label> 
+</p>
+
+<p>
+<label> Address 1
+<input type="text" name="address_1" required>
+</label> 
+</p>
+
+<p>
+<label> Address 2
+<input type="text" name="address_2" required>
+</label> 
+</p>
+
+<p>
+<label>City
+<input type="tel" name="city_name" required>
+</label>
+</p>
+
+<p>
+<label>Country
+<input type="tel" name="country_name" required>
+</label>
+</p>
+
+<p>
+<label>State
+<select id="state" name="state">
+<option value="" selected="selected">Select One</option>
+<option value="goa" >Goa</option>
+<option value="mumbai" >Mumbai</option>
+<option value="bangalore" >Bangalore</option>
+</select>
+</label> 
+</p>
+
+<p>
+<label>Telephone 
+<input type="tel" name="phone_number">
+</label>
+</p>
+
+<p>
+<label>Email 
+<input type="email" name="email_address">
+</label>
+</p>
+
+<p>
+<label>Address where animal is located
+<input type="animal_addr" name="animal_address">
+</label>
+</p>
+
+<p>
+<label>City where animal is located
+<input type="animal_ct" name="animal_city">
+</label>
+</p>
+
+<p>
+<label>Country where animal is located
+<input type="animal_ctry" name="animal_country">
+</label>
+</p>
+
+<fieldset>
+<legend>Severity of animal condition</legend>
+<p><label class="choice"> <input type="radio" name="condition" required value="mild"> Mild </label></p>
+<p><label class="choice"> <input type="radio" name="condition" required value="moderate"> Moderate </label></p>
+<p><label class="choice"> <input type="radio" name="condition" required value="severe"> Severe </label></p>
+</fieldset>
+
+<fieldset>
+<legend>Injuries</legend>
+<p><label class="choice"> <input type="checkbox" name="injuries" value="leg"> Leg Injury</label></p>
+<p><label class="choice"> <input type="checkbox" name="injuries" value="head"> Head Injury</label></p>
+<p><label class="choice"> <input type="checkbox" name="injuries" value="other"> Other Injuries </label></p>
+</fieldset>
+
+<p>
+<label>Date/Time of discovery
+<input type="datetime-local" name="pickup_time" required>
+</label>
+</p>
+	
+
+
+<p>
+<label>Location of Incident
+<input type="text" name="area" required list="areas">
+</label>
+
+<datalist id="areas">
+<option value="House">
+<option value="Office">
+<option value="Other">
+</datalist>
+</p>
+
+<p>
+<label>Please describe your concern, including the names and contact information of the individuals and agencies involved, dates and times, the exact location of the incident, and what has been done this far
+<textarea name="comments" maxlength="500"></textarea>
+</label>
+</p>
+
+<p><button>Submit Form</button></p>
+
+</form>
+
+</body>
+</html>
